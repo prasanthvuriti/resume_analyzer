@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Error</h1>
+        <p>{{ message }}</p>
+        <!-- <p>Please upload only PDF, DOC, or DOCX files.</p> -->
+        <a href="{% url 'upload_resume' %}" class="cta-button">Try Again</a>
+    </div>
+</body>
+</html>

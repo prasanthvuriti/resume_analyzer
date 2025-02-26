@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analyzer</title>
+    <link rel="icon" href="{% static 'images/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <header>
+        <h1>Resume Analyzer</h1>
+        <p>Analyze your resume and improve your chances of getting hired!</p>
+    </header>
+    
+    <section class="upload-section">
+        <h2>Upload Your Resume</h2>
+        <a class="_button" href="{% url 'upload_resume' %}">Upload Your Resume</a>
+    </section>
+
+    <script src="{% static 'js/style.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #E3F2FD;
+    color: #1A3D1D;
+    text-align: center;
+}
+.container {
+    margin: 100px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    width: 50%;
+}
+h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.cta-button {
+    background: #2E7D32;
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.4s;
+    color: #1A3D1D;
+    text-decoration: none;
+    display: inline-block;
+}
+.cta-button:hover {
+    background: #1B5E20;
+    transform: scale(1.15);
+    box-shadow: 0px 4px 8px rgba(255, 59, 125, 0.3);
+}
+._button:hover{
+    color:  #1B5E20;
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    width: 60%;
+    background-color: white;
+    text-underline-offset: none;
+
+}
+.my_button:hover{
+    color:  #1B5E20;
+}

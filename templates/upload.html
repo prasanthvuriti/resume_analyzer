@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Resume</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Upload Your Resume</h2>
+        <p>Please upload your resume in PDF or DOCX format.</p>
+
+        {% if error_message %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+
+        <form id="resumeForm" action="{% url 'analyze_resume' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="resume" accept=".pdf,.doc,.docx" required class="my_button">
+            <button class="my_button" type="submit">Analyze Resume</button>
+        </form>
+    </div>
+
+</body>
+</html>

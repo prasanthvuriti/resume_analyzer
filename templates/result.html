@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analysis Results</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Resume Analysis Results</h1>
+    </header>
+    <section>
+        {% if suggestions %}
+    {% for suggestion in suggestions %}
+        <div class="result-card">
+            <h2>{{ suggestion.job_title }}</h2>
+            <p><strong>Match Percentage:</strong> {{ suggestion.match_percentage }}%</p>
+            <p><strong>Skills to Improve:</strong> {{ suggestion.missing_skills | join:', ' }}</p>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No job matches found. Try improving your resume!</p>
+{% endif %}
+    </section>
+</body>
+</html>
