@@ -80,9 +80,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DEBUG = env.bool('DEBUG', default=True)
-import pymysql #railway
-pymysql.install_as_MySQLdb() #railway
-#railway
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -93,18 +91,6 @@ DATABASES = {
         'PORT': env('DB_PORT', default='3306'),
     }
 }
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': env('DB_NAME', default='resume_db'),
-#         'USER': env('DB_USER', default='root'),
-#         'PASSWORD': env('DB_PASSWORD', default='1234'),
-#         'HOST': env('DB_HOST', default='localhost'),
-#         'PORT': env('DB_PORT', default='3306'),
-#     }
-# }
 
 
 # Password validation
